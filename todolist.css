@@ -9,6 +9,11 @@ body {
 @font-face {
     font-family: mainFont;
     src: url(Bauhaus\ 93\ Regular.ttf);
+    color: #fff;
+}
+
+h2 {
+    color: #fff;
 }
 
 .Header {
@@ -24,14 +29,15 @@ ul {
 
 #theTask {
     display: flex;
-    margin: auto;
+    margin: 20px auto;
     justify-self: center;
     align-self: center;
-    width: 70vw;
+    width: 400px;
     cursor: pointer;
     position: relative;
     padding: 12px 15px 14px 12px;
     background: #87899c;
+    border-radius: 10px;
     font-size: 20px;
     font-family: mainFont;
     color: white;
@@ -41,6 +47,8 @@ ul {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+
+    padding: 10px;
 }
 
 #theTask li {
@@ -48,8 +56,16 @@ ul {
     margin: auto;
     align-self: center;
     justify-self: center;
+    border-radius: 10px;
+    padding-left: 10px;
 }
 
 #theTask li:nth-child(odd) {
     background: #555564;
+}
+
+.addBtn {
+    color: white;
+    background-color: #87899c;
+    padding: 5px;
 }
