@@ -72,6 +72,13 @@ ul {
 
 .addBtn {
     color: white;
+    font-size: 20px;
     background-color: #87899c;
+    border-radius: 5px;
     padding: 5px;
+}
+
+#myInput {
+    height: 30px;
+    border-radius: 5px;
 }
