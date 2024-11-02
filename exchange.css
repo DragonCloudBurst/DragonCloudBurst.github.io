@@ -63,11 +63,17 @@ p {
 }
 
 .item-exchange {
-    display: flex;
     font-family: mainFont;
     font-size: 20px;
     margin: 20px 40px;
     padding: 10px;
     background-color: #87899C;
     border-radius: 10px;
+}
+
+.tagline {
+    background-color: #555564;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 30px;
 }
