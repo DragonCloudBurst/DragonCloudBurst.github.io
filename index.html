@@ -51,13 +51,25 @@
 
 
     // Add a "checked" symbol when clicking on a list item
-    var list = document.querySelector('ul');
-    list.addEventListener('click', function(ev) {
+      // Add a "checked" symbol when clicking on a list item
+      let credits = 0;
+      var list = document.querySelector('ul');
+      var countDisplay = document.createElement('div');
+      document.body.appendChild(countDisplay);
+      list.addEventListener('click', function(ev) {  
         if (ev.target.tagName === 'LI') {
-            ev.target.classList.toggle('checked');
-        }
-    }, false);
-
+              ev.target.classList.toggle('checked');
+              if(ev.target.classList.contains('checked')) {
+              credits++;
+              }
+              else{
+                credits--;
+              }
+            //Displays the checked items to the user.
+            //TODO: Add Styling to the "countDisplay" variable
+            countDisplay.textContent = `Checked Items: ${credits}`;
+          }
+      }, false);
     // Create a new list item when clicking on the "Add" button
     function newElement() {
         var li = document.createElement("li");
