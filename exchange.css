@@ -1,9 +1,15 @@
 body {
+    background-color: #555564;
     background-image: url(images/hackncmockup_bg_1.png);
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
     padding: 0px;
     margin: 0px;
+}
+
+.main-div {
+    background-color: #555564;
+    height: 100%;
 }
 
 @font-face {
@@ -54,4 +60,14 @@ p {
     margin: 50px 0px;
     align-self: self-start;
     width: 70vw
+}
+
+.item-exchange {
+    display: flex;
+    font-family: mainFont;
+    font-size: 20px;
+    margin: 20px 40px;
+    padding: 10px;
+    background-color: #87899C;
+    border-radius: 10px;
 }
