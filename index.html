@@ -10,82 +10,76 @@
     <head>
         <title></title>
         <meta charset="UTF-8" lang="en">
-        <link rel = "stylesheet" href = "todoList1.css">
+        <link rel = "stylesheet" href = "main.css">
     </head>
 
     <body>
         <div id="window">
-            <img src="hackncmockup_window.png">
+            <img src="images/hackncmockup_window.png">
             <p id="timer-text">00:00</p>
             <div class="buttons-div">
                 <button type="button" id="start-btn"><img src="images/start_button.png"/></button>
                 <button type="button" id="pause-btn"><img src="images/pause_button.png"/></button>
                 <button type="button" id="end-btn"><img src="images/end_button.png"/></button>
             </div>
+        </div>
 
-            <div id="headfortask" class="Header">
-                <h2>Things to do</h2>
-                <input type="text" id="myInput" placeholder="Title...">
-                <span onclick="newElement()" class="addBtn">Add</span>
-            </div>
-            <div>
-                <ul id = "theTask">
-                </ul>
-            </div>
+        <div id="headfortask" class="Header">
+            <h2>Things to do</h2>
+            <input type="text" id="myInput" placeholder="Title...">
+            <span onclick="newElement()" class="addBtn">Add</span>
+        </div>
+        <div>
+            <ul id = "theTask">
+            </ul>
+        </div>
 
- <script>
-    // Create a "close" button and append it to each list item
-    function addCloseFunctionality() {
-    var close = document.getElementsByClassName("close");
-    for (let i = 0; i < close.length; i++) {
-        close[i].onclick = function() {
-            var div = this.parentElement;
-            div.style.display = "none";
+    <script>
+        // Create a "close" button and append it to each list item
+        function addCloseFunctionality() {
+        var close = document.getElementsByClassName("close");
+        for (let i = 0; i < close.length; i++) {
+            close[i].onclick = function() {
+                var div = this.parentElement;
+                div.style.display = "none";
+            }
         }
     }
-}
 
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-    if (ev.target.tagName === 'LI') {
-        ev.target.classList.toggle('checked');
+
+    // Add a "checked" symbol when clicking on a list item
+    var list = document.querySelector('ul');
+    list.addEventListener('click', function(ev) {
+        if (ev.target.tagName === 'LI') {
+            ev.target.classList.toggle('checked');
+        }
+    }, false);
+
+    // Create a new list item when clicking on the "Add" button
+    function newElement() {
+        var li = document.createElement("li");
+        var inputValue = document.getElementById("myInput").value.trim();
+        var t = document.createTextNode(inputValue);
+
+        if (inputValue === '') {
+            alert("You must write something!");
+            return;
+        }
+
+        li.appendChild(t);
+        document.getElementById("theTask").appendChild(li);
+        document.getElementById("myInput").value = ""; // Clear input field
+
+
+        var span = document.createElement("SPAN");
+        var txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        li.appendChild(span);
+
+
+        addCloseFunctionality();
     }
-}, false);
-
-// Create a new list item when clicking on the "Add" button
-function newElement() {
-    var li = document.createElement("li");
-    var inputValue = document.getElementById("myInput").value.trim();
-    var t = document.createTextNode(inputValue);
-
-    if (inputValue === '') {
-        alert("You must write something!");
-        return;
-    }
-
-    li.appendChild(t);
-    document.getElementById("theTask").appendChild(li);
-    document.getElementById("myInput").value = ""; // Clear input field
-
-
-    var span = document.createElement("SPAN");
-    var txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
-    li.appendChild(span);
-
-
-    addCloseFunctionality();
-}
-
-// Event listener for Enter key
-document.getElementById("myInput").addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-        newElement();
-    }
-});
-            </script>
-        </div>
+    </script>
     </body>
 </html>
