@@ -1,6 +1,6 @@
 body {
-    background-image: url(images/hackncmockup_bg_1.png);
-    background-size: 100vw 100vh;
+    background-color: #555564;
+    background-size: 100vw;
     background-repeat: no-repeat;
     padding: 0px;
     margin: 0px;
@@ -14,34 +14,12 @@ body {
 
 h2 {
     color: #fff;
-    padding: 0px;
-    margin: 10px;
-}
-
-p {
-    font-size: 18px;
-    color: #fff;
 }
 
 .Header {
     font-family: mainFont;
     font-size: 30px;
     text-align: center;
-}
-
-#window {
-    position: relative;
-    text-align: center;
-}
-
-#timer-text {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 5vw;
-    color: #fff;
-    font-family: mainFont;
 }
 
 #window img {
@@ -55,7 +33,7 @@ ul {
     padding: 0;
 }
 
-#theTask {
+#theTask li {
     display: flex;
     margin: 20px auto;
     justify-self: center;
@@ -89,7 +67,7 @@ ul {
 }
 
 #theTask li:nth-child(odd) {
-    background: #555564;
+    background: #87899c;
 }
 
 .addBtn {
@@ -104,3 +82,30 @@ ul {
     height: 30px;
     border-radius: 5px;
 }
+
+.close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+    font-family: mainFont;
+}
+
+.close:hover{
+    background-color: #f44336;
+    color: white;
+}
+
+input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    font-size: 16px;
+    font-family: mainFont;
+  }
+
+  #theTask li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
