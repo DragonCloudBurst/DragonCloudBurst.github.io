@@ -81,6 +81,10 @@ function minMin()
     }
     document.getElementById("timer-text").innerHTML=hrs+":"+min+":"+sec; 
 }
+function doPause()
+{
+    alert("pause");
+}
 
 function minHour()
 {
