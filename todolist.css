@@ -1,5 +1,5 @@
 body {
-    background-image: url(images/hackncmockup_background_1.png);
+    background-color: #555564;
     background-size: 100vw;
     background-repeat: no-repeat;
     padding: 0px;
@@ -18,8 +18,14 @@ h2 {
 
 .Header {
     font-family: mainFont;
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
+}
+
+#window img {
+    width: 25vw;
+    display: flex;
+    margin: 10vh auto 0px;
 }
 
 ul {
