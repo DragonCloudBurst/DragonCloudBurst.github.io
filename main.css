@@ -58,8 +58,8 @@ ul {
     padding: 20px;
 }
 
-#theTask li:nth-child(odd) {
-    background: #555564;
+#theTask li {
+    background-color: #87899c;
 }
 
 .addBtn {
