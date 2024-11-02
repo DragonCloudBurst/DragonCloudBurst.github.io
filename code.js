@@ -5,10 +5,10 @@ let time;
 let timerSplit;
 let notZero=true;
 
-function onLoad()
+function onPlay()
 {
     time=prompt("How long do you want to set your timer");
-    document.getElementById("timer").innerHTML=time;
+    document.getElementById("timer-text").innerHTML=time;
     console.log(time);
     let cTime=Date.now()/1000;
     timerSplit=time.split(":")
@@ -43,20 +43,24 @@ function onLoad()
                 else
                 {
                     alert("done");
-                    document.getElementById("timer").innerHTML=String(hrs).padStart(2, '0')+":"+String(min).padStart(2, '0')+":"+String(sec).padStart(2, '0');
+                    document.getElementById("timer-text").innerHTML=String(hrs).padStart(2, '0')+":"+String(min).padStart(2, '0');
                     clearInterval(myInter);                }
             }
 
         }
         console.log("secTest:"+sec)
-        document.getElementById("timer").innerHTML=String(hrs).padStart(2, '0')+":"+String(min).padStart(2, '0')+":"+String(sec).padStart(2, '0');
+        document.getElementById("timer-text").innerHTML=String(hrs).padStart(2, '0')+":"+String(min).padStart(2, '0');
         console.log(hrs+":"+min+":"+sec);
 
     },1000)
-    document.getElementById("timer").innerHTML=String(hrs).padStart(2, '0')+":"+String(min).padStart(2, '0')+":"+String(sec).padStart(2, '0');
+    document.getElementById("timer-text").innerHTML=String(hrs).padStart(2, '0')+":"+String(min).padStart(2, '0');
 
 }
-
+function stopPlay()
+{
+    document.getElementById("timer-text").innerHTML=String(0).padStart(2, '0')+":"+String(0).padStart(2, '0');
+    clearInterval(myInter);                
+}
 function minSec()
 {
     sec=sec-1
@@ -65,7 +69,7 @@ function minSec()
     {
         sec=59;
     }
-    document.getElementById("timer").innerHTML=hrs+":"+min+":"+sec;
+    document.getElementById("timer-text").innerHTML=hrs+":"+min+":"+sec;
 }
 function minMin()
 {
@@ -75,13 +79,13 @@ function minMin()
     {
         min=59;
     }
-    document.getElementById("timer").innerHTML=hrs+":"+min+":"+sec; 
+    document.getElementById("timer-text").innerHTML=hrs+":"+min+":"+sec; 
 }
 
 function minHour()
 {
     hrs=hrs-1
-    document.getElementById("timer").innerHTML=hrs+":"+min+":"+sec;
+    document.getElementById("timer-text").innerHTML=hrs+":"+min+":"+sec;
 }
 
 function updateTimer()
