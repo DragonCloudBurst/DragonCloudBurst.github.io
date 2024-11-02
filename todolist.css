@@ -1,0 +1,35 @@
+@font-face {
+    font-family: mainFont;
+    src: url(Bauhaus\ 93\ Regular.ttf);
+}
+
+.Header {
+    font-family: mainFont;
+    font-size: 20px;
+    text-align: center;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+#theTask li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 15px 14px 12px;
+    background: #87899c;
+    font-size: 25px;
+    font-family: mainFont;
+    color: white;
+
+    /* Make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#theTask li:nth-child(odd) {
+    background: #555564;
+}
