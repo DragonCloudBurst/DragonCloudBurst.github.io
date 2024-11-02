@@ -6,6 +6,8 @@ let timerSplit;
 let notZero=true;
 let isPaused=false;
 let isPressed=false;
+localStorage.setItem("credits", 3);
+
 function onPlay()
 {
     if(!isPaused)
@@ -19,6 +21,7 @@ function onPlay()
         hrs=timerSplit[0];
         min=timerSplit[1];
         sec=timerSplit[2]; 
+        
     }
  
     let timeinSec=sec+(min*60)+((hrs*60)*60);
@@ -134,3 +137,4 @@ function updateTimer()
         notZero=false;
     }
 }
+

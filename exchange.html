@@ -6,7 +6,7 @@
         <link rel = "stylesheet" href = "exchange.css">
     </head>
 
-    <body>
+    <body onload="eLoad()">
         <div id="main-div">
             <div id="window">
                 <img src="images/hackncmockup_window.png">
@@ -16,7 +16,7 @@
             <img src="images/divider.png" class="divider"/>
 
             <div class="credits">
-                <p>You have [x] credits.</p>
+                <p id="credit-count">You have [x] credits.</p>
             </div>
 
             <div class="item-exchange item-1">
@@ -69,4 +69,6 @@
         </div>
     </div>
     </body>
+    <script src="exchange.js"></script>
+    <script src="code.js"></script>
 </html>
