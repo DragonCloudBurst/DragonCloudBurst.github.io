@@ -1,0 +1,144 @@
+body {
+    background-color: #555564;
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    padding: 0px;
+    margin: 0px;
+}
+
+@font-face {
+    font-family: mainFont;
+    src: url(Bauhaus\ 93\ Regular.ttf);
+    color: #fff;
+}
+
+h2 {
+    color: #fff;
+}
+
+.Header {
+    font-family: mainFont;
+    font-size: 30px;
+    text-align: center;
+}
+
+#window img {
+    width: 25vw;
+    display: flex;
+    margin: 10vh auto 0px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+#theTask li {
+    display: flex;
+    margin: 20px auto;
+    justify-self: center;
+    align-self: center;
+    width: 80vw;
+    cursor: pointer;
+    position: relative;
+    padding: 12px 15px 14px 12px;
+    background: #87899c;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: mainFont;
+    color: white;
+
+    /* Make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    padding: 20px;
+}
+
+
+
+#theTask li:nth-child(odd) {
+    background: #555564;
+
+    background: #87899c;
+}
+
+.addBtn {
+    color: white;
+    font-size: 20px;
+    background-color: #87899c;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#myInput {
+    height: 30px;
+    border-radius: 5px;
+}
+
+.close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+    font-family: mainFont;
+}
+
+.close:hover{
+    background-color: #f44336;
+    color: white;
+}
+
+input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    font-size: 16px;
+    font-family: mainFont;
+  }
+
+
+
+  .buttons-div button {
+    background-color: transparent;
+    border: none;
+}
+
+#timer-text {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5vw;
+    color: #fff;
+    font-family: mainFont;
+}
+
+
+  /* When clicked on, add a background color and strike out text */
+  #theTask li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
+  
+  /* Add a "checked" mark when clicked on */
+  #theTask li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+
+
+  #theTask li:hover {
+    background: #ddd;
+  }
