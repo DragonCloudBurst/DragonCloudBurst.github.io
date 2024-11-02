@@ -57,9 +57,15 @@ p {
 }
 
 .divider {
-    margin: 50px 0px;
+    margin: 70px 0px 20px 0px;
     align-self: self-start;
-    width: 70vw
+    width: 70vw;
+}
+
+.credits {
+    text-align: center;
+    font-family: mainFont;
+    padding: 5px;
 }
 
 .item-exchange {
