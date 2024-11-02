@@ -13,6 +13,12 @@ body {
     color: #fff;
 }
 
+@font-face {
+    font-family: secondFont;
+    src: url(Garet-Heavy.ttf);
+    color: #fff;
+}
+
 h2 {
     color: #fff;
     padding: 0px;
@@ -20,6 +26,7 @@ h2 {
 }
 
 p {
+    font-family: secondFont;
     font-size: 18px;
     color: #fff;
 }

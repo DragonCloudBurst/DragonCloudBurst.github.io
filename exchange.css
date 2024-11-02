@@ -18,13 +18,21 @@ body {
     color: #fff;
 }
 
+@font-face {
+    font-family: secondFont;
+    src: url(Garet-Heavy.ttf);
+    color: #fff;
+}
+
 h2 {
+    font-family: mainFont;
     color: #fff;
     padding: 0px;
     margin: 10px;
 }
 
 p {
+    font-family: secondFont;
     font-size: 18px;
     color: #fff;
 }
@@ -69,7 +77,7 @@ p {
 }
 
 .item-exchange {
-    font-family: mainFont;
+    font-family: secondFont;
     font-size: 20px;
     margin: 20px 40px;
     padding: 10px;
@@ -82,4 +90,14 @@ p {
     padding: 10px;
     border-radius: 10px;
     margin: 10px 30px;
+}
+
+button {
+    margin-left: 60px;
+    font-family: secondFont;
+    font-size: 14px;
+    background-color: #d4d4f5;
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
 }
