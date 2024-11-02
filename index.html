@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        <div id="main-div">
+        
             <div id="window">
                 <img src="images/hackncmockup_window.png">
                 <p id="timer-text">00:00</p>
@@ -17,17 +17,19 @@
                     <button type="button" id="end-btn" onclick="stopPlay()"><img src="images/end_button.png"/></button>
                 </div>
             </div>
-
+        <div id="main-div">
             <div id="headfortask" class="Header">
-                <h2>Tasks</h2>
+                <h2>Taskstronaut</h2>
                 <p>Check off a task to earn credits!</p>
-                <input type="text" id="myInput" placeholder="Title...">
+                <input type="text" id="myInput" placeholder="Enter a task...">
                 <span onclick="newElement()" class="addBtn">Add</span>
             </div>
             <div id="theTask">
                 <ul>
                 </ul>
             </div>
+
+            <h2 class="credits-page"><a href="exchange.html">Exchange Credits</a></h2>
 
             <script>
                 // Create a "close" button and append it to each list item

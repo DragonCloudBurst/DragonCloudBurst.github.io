@@ -1,0 +1,85 @@
+body {
+    background-color: #555564;
+    background-image: url(images/hackncmockup_bg_1.png);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    padding: 0px;
+    margin: 0px;
+}
+
+.main-div {
+    background-color: #555564;
+    height: 100%;
+}
+
+@font-face {
+    font-family: mainFont;
+    src: url(Bauhaus\ 93\ Regular.ttf);
+    color: #fff;
+}
+
+h2 {
+    color: #fff;
+    padding: 0px;
+    margin: 10px;
+}
+
+p {
+    font-size: 18px;
+    color: #fff;
+}
+
+.Header {
+    font-family: mainFont;
+    font-size: 30px;
+    text-align: center;
+}
+
+#window {
+    position: relative;
+    text-align: center;
+}
+
+#timer-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5vw;
+    color: #fff;
+    font-family: mainFont;
+}
+
+#window img {
+    width: 25vw;
+    display: flex;
+    margin: 10vh auto 0px auto;
+}
+
+.divider {
+    margin: 70px 0px 20px 0px;
+    align-self: self-start;
+    width: 70vw;
+}
+
+.credits {
+    text-align: center;
+    font-family: mainFont;
+    padding: 5px;
+}
+
+.item-exchange {
+    font-family: mainFont;
+    font-size: 20px;
+    margin: 20px 40px;
+    padding: 10px;
+    background-color: #87899C;
+    border-radius: 10px;
+}
+
+.tagline {
+    background-color: #555564;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 30px;
+}
