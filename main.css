@@ -1,5 +1,6 @@
 body {
     background-color: #555564;
+    background-image: url(images/hackncmockup_bg_1.png);
     background-size: 100vw;
     background-repeat: no-repeat;
     padding: 0px;
@@ -57,12 +58,8 @@ ul {
     padding: 20px;
 }
 
-
-
 #theTask li:nth-child(odd) {
     background: #555564;
-
-    background: #87899c;
 }
 
 .addBtn {
@@ -97,11 +94,18 @@ input {
     border-radius: 0;
     font-size: 16px;
     font-family: mainFont;
-  }
+}
 
+.buttons-div {
+    display: flex;
+    margin: 20px auto;
+    align-self: center;
+    justify-self: center;
+    height: fit-content;
+    width: fit-content;
+}
 
-
-  .buttons-div button {
+.buttons-div button {
     background-color: transparent;
     border: none;
 }
@@ -118,14 +122,14 @@ input {
 
 
   /* When clicked on, add a background color and strike out text */
-  #theTask li.checked {
+#theTask li.checked {
     background: #888;
     color: #fff;
     text-decoration: line-through;
-  }
+}
   
   /* Add a "checked" mark when clicked on */
-  #theTask li.checked::before {
+#theTask li.checked::before {
     content: '';
     position: absolute;
     border-color: #fff;
@@ -136,9 +140,9 @@ input {
     transform: rotate(45deg);
     height: 15px;
     width: 7px;
-  }
+}
 
 
-  #theTask li:hover {
+#theTask li:hover {
     background: #ddd;
-  }
+}
