@@ -13,6 +13,12 @@ body {
     color: #fff;
 }
 
+@font-face {
+    font-family: mainFont;
+    src: url(Garet-Heavy.ttf);
+    color: #fff;
+}
+
 h2 {
     color: #fff;
 }
