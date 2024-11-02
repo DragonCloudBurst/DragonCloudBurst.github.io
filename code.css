@@ -1,0 +1,6 @@
+.timer
+{
+    overflow: hidden;
+    white-space: nowrap;
+    color: red;
+}
