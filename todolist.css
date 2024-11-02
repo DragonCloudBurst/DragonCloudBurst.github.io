@@ -22,6 +22,21 @@ h2 {
     text-align: center;
 }
 
+#window {
+    position: relative;
+    text-align: center;
+}
+
+#timer-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5vw;
+    color: #fff;
+    font-family: mainFont;
+}
+
 #window img {
     width: 25vw;
     display: flex;
