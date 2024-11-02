@@ -4,50 +4,63 @@ let hrs;
 let time;
 let timerSplit;
 let notZero=true;
-
+let isPaused=false;
+let isPressed=false;
 function onPlay()
 {
-    time=prompt("How long do you want to set your timer");
-    document.getElementById("timer-text").innerHTML=time;
-    console.log(time);
-    let cTime=Date.now()/1000;
-    timerSplit=time.split(":")
-    hrs=timerSplit[0];
-    min=timerSplit[1];
-    sec=timerSplit[2]; 
+    if(!isPaused)
+    {
+        isPressed=false
+        time=prompt("How long do you want to set your timer");
+        document.getElementById("timer-text").innerHTML=time;
+        console.log(time);
+        let cTime=Date.now()/1000;
+        timerSplit=time.split(":")
+        hrs=timerSplit[0];
+        min=timerSplit[1];
+        sec=timerSplit[2]; 
+    }
+ 
     let timeinSec=sec+(min*60)+((hrs*60)*60);
 
-    alert("before")
+    // alert("before")
+
+
     myInter=setInterval(function (){
         console.log("arr");
         
         sec=Number(sec)-1;
-        if(sec==0)
+        if(sec<=0)
         {
-            if(min!=0)
+            if(min<=0&&hrs>0)
             {
                 console.log("mins are zero")
                 min=Number(min)-1;
                 sec=59;
     
             }
-            else
+            if(hrs>0)
             {
-                if(hrs!=0)
-                {
-                    console.log("hrs not zero")
-                    hrs=Number(hrs)-1;
-                    min=59;
-                    sec=59;
-                }
-                else
-                {
-                    alert("done");
-                    document.getElementById("timer-text").innerHTML=String(hrs).padStart(2, '0')+":"+String(min).padStart(2, '0');
-                    clearInterval(myInter);                }
+                console.log("hrs not zero")
+                hrs=Number(hrs)-1;
+                min=59;
+                sec=59;
             }
 
-        }
+            
+
+            }
+        console.log("hrs:"+hrs+"mins:"+min+"sec:"+sec);
+        if(0>=hrs&&0>=min&&0>=sec)
+            {
+                isPaused=false;
+                alert("done");
+
+                document.getElementById("timer-text").innerHTML=String(hrs).padStart(2, '0')+":"+String(min).padStart(2, '0');
+                clearInterval(myInter);                
+            }
+        
+        
         console.log("secTest:"+sec)
         document.getElementById("timer-text").innerHTML=String(hrs).padStart(2, '0')+":"+String(min).padStart(2, '0');
         console.log(hrs+":"+min+":"+sec);
@@ -59,7 +72,8 @@ function onPlay()
 function stopPlay()
 {
     document.getElementById("timer-text").innerHTML=String(0).padStart(2, '0')+":"+String(0).padStart(2, '0');
-    clearInterval(myInter);                
+    clearInterval(myInter);  
+    isPaused=false              
 }
 function minSec()
 {
@@ -75,7 +89,7 @@ function minMin()
 {
     min=min-1
 
-    if(hrs>0&&min==0)
+    if(hrs>0&&min<=0)
     {
         min=59;
     }
@@ -83,7 +97,9 @@ function minMin()
 }
 function doPause()
 {
-    alert("pause");
+    clearInterval(myInter);                
+    isPaused=true;
+    console.log("pause");
 }
 
 function minHour()
