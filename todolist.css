@@ -114,11 +114,13 @@ ul {
     background-color: #87899c;
     border-radius: 5px;
     padding: 5px;
+    margin: 5px;
 }
 
 #myInput {
     height: 30px;
-    border-radius: 5px;
+    border-radius: 7px;
+    border: 5px solid #87899c;
 }
 
 .credits-page {
