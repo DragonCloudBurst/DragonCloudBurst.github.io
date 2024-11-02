@@ -50,6 +50,35 @@ p {
     margin: 10vh auto 0px;
 }
 
+.buttons-div {
+    display: flex;
+    margin: 20px auto;
+    padding: 10px;
+    align-self: center;
+    height: fit-content;
+    width: fit-content;
+}
+
+.buttons-div button {
+    display: inline-block;
+    width: 20vw;
+    height: 30px;
+}
+
+#start-btn {
+    background-image: url(images/start_button.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+#pause-btn {
+    background-image: url(images/pause_button.png);
+}
+
+#end-btn {
+    background-image: url(images/end_button.png);
+}
+
 ul {
     margin: 0;
     padding: 0;
