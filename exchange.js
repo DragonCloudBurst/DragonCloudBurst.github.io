@@ -1,6 +1,6 @@
 localStorage.setItem("credits", 3);
 localStorage.setItem("onwed", 123);
-localStorage.used("useing", 1);
+localStorage.setItem("useing", 1);
 let buyMsg="buy";
 let owndMsg="use"
 let useing="useing";
