@@ -1,4 +1,4 @@
-localStorage.setItem("credits", 3);
+let credit=4;
 localStorage.setItem("onwed", 123);
 localStorage.setItem("useing", 1);
 let buyMsg="buy";
@@ -9,21 +9,30 @@ let useing="useing";
 function eLoad()
 {
     alert("gi");
-    document.getElementById("credit-count").innerHTML="You have "+localStorage.getItem("credits")+" credits.";
+    document.getElementById("credit-count").innerHTML="You have "+credit+"credits.";
     onwing();
 }
 function onwing()
 {
     let onwedList=localStorage.getItem("onwed");
     let i=0;
-    while(i>3)
+    let num=0;;
+    // while(num<3)
+    // {
+    //     console.log("numStart:"+num)
+    //     // num=onwedList%10;
+    //     num++;
+    //     let idTest="I"+num;
+    //     console.log("idName:"+idTest)
+
+    //     // console.log("indy:"+document.getElementById("idTest"))
+    //     // document.getElementById(idny).innerHTML=buyMsg;
+    //     num=onwedList/10;
+    // }
+    for(let i=0;i<3;i++)
     {
-        
-        let num=onwedList%10;
-        let idny="I"+num;
-        console.log(console.log("indy:"+indny))
-        // document.getElementById(idny).innerHTML=buyMsg;
-        num=onwedList/10;
-        i++; 
+        console.log("i:"+i);
+        let idTest="I"+i;
+        console.log("idTest:"+document.getElementById(idTest)).in;
     }
 }
