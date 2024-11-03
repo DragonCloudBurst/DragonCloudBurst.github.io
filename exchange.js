@@ -15,13 +15,15 @@ function eLoad()
 function onwing()
 {
     let onwedList=localStorage.getItem("onwed");
-    while(onwedList>0)
+    let i=0;
+    while(i>3)
     {
         
         let num=onwedList%10;
         let idny="I"+num;
+        console.log(console.log("indy:"+indny))
         // document.getElementById(idny).innerHTML=buyMsg;
         num=onwedList/10;
-        
+        i++; 
     }
 }
