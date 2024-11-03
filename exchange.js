@@ -20,7 +20,7 @@ function onwing()
         
         let num=onwedList%10;
         let idny="I"+num;
-        document.getElementById(idny).innerHTML=buyMsg;
+        // document.getElementById(idny).innerHTML=buyMsg;
         num=onwedList/10;
         
     }
