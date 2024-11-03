@@ -1,29 +1,51 @@
-localStorage.setItem("credits", 3);
-localStorage.setItem("onwed", 123);
+let credit=4;
+localStorage.setItem("onwed", 1,2,3);
 localStorage.setItem("useing", 1);
 let buyMsg="buy";
 let owndMsg="use"
 let useing="useing";
-
-
-function eLoad()
-{
-    alert("gi");
-    document.getElementById("credit-count").innerHTML="You have "+localStorage.getItem("credits")+" credits.";
-    onwing();
-}
 function onwing()
 {
     let onwedList=localStorage.getItem("onwed");
+    console.log(typeof(onwedList));
     let i=0;
-    while(i>3)
+    let num=0;;
+    // while(num<3)
+    // {
+    //     console.log("numStart:"+num)
+    //     // num=onwedList%10;
+    //     num++;
+    //     let idTest="I"+num;
+    //     console.log("idName:"+idTest)
+
+    //     // console.log("indy:"+document.getElementById("idTest"))
+    //     // document.getElementById(idny).innerHTML=buyMsg;
+    //     num=onwedList/10;
+    // }
+    onwedListLen=onwedList.length;
+    onwedList="1,2,3";
+    console.log(onwedListLen)
+    console.log("onwedList "+onwedList)
+    ownListTwo=onwedList.split(',')
+    console.log("arr:"+ownListTwo)
+    for(let i=0;i<=ownListTwo.length;i++)
     {
         
-        let num=onwedList%10;
-        let idny="I"+num;
-        console.log(console.log("indy:"+indny))
-        // document.getElementById(idny).innerHTML=buyMsg;
-        num=onwedList/10;
-        i++; 
+        
+        let a =Math.floor(onwedList%10)
+        let idTest="I"+Number(onwedList[i]);
+        console.log("idName "+idTest)
+        console.log("elemtns:"+document.getElementById(idTest));
+        document.getElementById(idTest).innerHTML="use";
+        onwedList=Math.floor(onwedList/10);
     }
+
 }
+function eLoad()
+{
+    alert("gi");
+    document.getElementById("credit-count").innerHTML="You have "+credit+"credits.";
+    onwing();
+}
+
+
