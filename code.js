@@ -7,6 +7,9 @@ let notZero=true;
 let isPaused=false;
 let isPressed=false;
 let tot;
+const alarm = new Audio("sounds/alarm.wav");
+const min15 = new Audio("sounds/15minleft.wav");
+
 
 localStorage.setItem("credits", 3);
 function doPause()
