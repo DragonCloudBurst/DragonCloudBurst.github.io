@@ -18,6 +18,7 @@ HackNC hackathon group project for 2024's event.
   * Sound effects: ChipTone (https://sfbgames.itch.io/chiptone)
   * Illustration: Procreate (iOS)
   * Vector Graphics: Affinity Designer
+  * Git/Github
 
   ***Materials Referenced***
   * W3Schools
