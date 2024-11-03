@@ -7,7 +7,9 @@ let useing="useing";
 function onwing()
 {
     localStorage.setItem("onwed",localStorage.getItem("onwed") || '1,2,3');
-
+    // seeIfBuy(money,inUse,cost,id,num)
+    seeIfBuy(credit,localStorage.getItem("useing"),2,"I2",2);
+    seeIfBuy(credit,localStorage.getItem("useing"),4,"I3",3);
     let onwedList=localStorage.getItem("onwed");
     console.log("re"+onwedList);
     let i=0;
@@ -55,34 +57,59 @@ function onwing()
 }
 function seeIfBuy(money,inUse,cost,id,num)
 {
+    onwList=localStorage.getItem("onwed");
+    onwList=onwList.split(',')
+    if(!onwList.includes(num))
+   {
+        document.getElementById(id).innerHTML="Buy ["+cost+"]";
         if(money<cost)
         {
             document.getElementById(id).disabled=true;
-            document.getElementById(id).innerHTML="Buy"+[cost];
-
         }
-        else
-        {
+
+   }
+    else
+    {  
+
             if(inUse!=num)
             {
+                document.getElementById(id).innerHTML="Use";
+
+
+            }
+            else
+            {
+                document.getElementById(id).innerHTML="useing";
 
             }
         }
 }
-function btn2()
+
+function btnclik()
 {
-    if(credit<2)
-    {
-        document.getElementById(btn2).disabled=true;
-    }
-    else
-    {
-        if(useing!=2)
-        {
 
-        }
-    }
+    onwList=localStorage.getItem("onwed");
+    onwList=onwList.split(',')
+    if(!onwList.includes(num))
+   {
+       document.getElementById(id).innerHTML="buy ["+cost+"]";
+       document.getElementById(id).innerHTML="buy";
 
+
+   }
+   else if(inUse!=num)
+   {
+    document.getElementById(id).disabled=true;
+    document.getElementById(id).innerHTML="equip";
+   }
+   else
+   {
+    document.getElementById(id).innerHTML="equiped";
+    document.getElementById(id).disabled=true;
+
+
+
+   }
 }
 function eLoad()
 {
