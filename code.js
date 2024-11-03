@@ -7,6 +7,8 @@ let notZero=true;
 let isPaused=false;
 let isPressed=false;
 localStorage.setItem("credits", 3);
+const alarmSound = new Audio("sounds/alarm.wav");
+const min15 = new Audio("sounds/15minleft.wav");
 
 function onPlay()
 {

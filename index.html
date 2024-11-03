@@ -51,7 +51,7 @@
         }
     }
 
-
+    const taskComplete = new Audio("sounds/task_complete.wav");
     // Add a "checked" symbol when clicking on a list item
       // Add a "checked" symbol when clicking on a list item
       let credits = 0;
@@ -64,6 +64,7 @@
               ev.target.classList.toggle('checked');
               if(ev.target.classList.contains('checked')) {
               credits++;
+              taskComplete.play();
               }
               else{
                 credits--;
