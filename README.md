@@ -2,7 +2,7 @@
 HackNC hackathon group project for 2024's event.
 
 PROJECT BY:
-* JaQuis Franklin: Created the list implimintation.
+* JaQuis Franklin: Created the list implimintation
 * Will Handfield: Created the timer and credit system
 * Troy Whetter: Learned
 * Kate Spivey: Art, style, and planning 
