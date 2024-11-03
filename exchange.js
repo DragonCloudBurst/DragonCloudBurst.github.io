@@ -7,7 +7,7 @@ let useing="useing";
 function onwing()
 {
     let onwedList=localStorage.getItem("onwed");
-    console.log(typeof(onwedList));
+    console.log("re"+onwedList);
     let i=0;
     let num=0;;
     // while(num<3)
@@ -23,17 +23,18 @@ function onwing()
     //     num=onwedList/10;
     // }
     onwedListLen=onwedList.length;
-    onwedList="1,2,3";
+    // onwedList="1,2,3";
     console.log(onwedListLen)
     console.log("onwedList "+onwedList)
     ownListTwo=onwedList.split(',')
     console.log("arr:"+ownListTwo)
-    for(let i=0;i<=ownListTwo.length;i++)
+    console.log("len:"+ownListTwo.length)
+    for(let i=0;i<ownListTwo.length;i++)
     {
         
         
         let a =Math.floor(onwedList%10)
-        let idTest="I"+Number(onwedList[i]);
+        let idTest="I"+Number(ownListTwo[i]);
         console.log("idName "+idTest)
         console.log("elemtns:"+document.getElementById(idTest));
         document.getElementById(idTest).innerHTML="use";
