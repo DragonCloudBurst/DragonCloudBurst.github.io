@@ -114,7 +114,8 @@ function onPlay()
         if(0>=hrs&&0>=min&&0>=sec)
         {
             clearInterval(myInter); 
-            alert("done"); 
+            alarm.play(); 
+            alert("Tne timmer is Up");
 
         }
         document.getElementById("timer-text").innerHTML=String(hrs).padStart(2, '0')+":"+String(min).padStart(2, '0')+":"+String(sec).padStart(2, '0');
