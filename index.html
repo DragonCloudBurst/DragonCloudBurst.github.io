@@ -10,6 +10,7 @@
     <head>
         <title></title>
         <meta charset="UTF-8" lang="en">
+        <link rel="icon" type="image/x-icon" src="images/favicon_tasktronaut.ico">
         <link rel = "stylesheet" href = "main.css">
     </head>
 
@@ -25,14 +26,16 @@
         </div>
 
         <div id="headfortask" class="Header">
-            <h2>Things to do</h2>
-            <input type="text" id="myInput" placeholder="Title...">
+            <h2>Taskstronaut</h2>
+            <input type="text" id="myInput" placeholder="Enter a task...">
             <span onclick="newElement()" class="addBtn">Add</span>
         </div>
         <div>
             <ul id = "theTask">
             </ul>
         </div>
+
+        <img src="images/divider.png" class="divider"/>
 
     <script>
         // Create a "close" button and append it to each list item
@@ -48,13 +51,26 @@
 
 
     // Add a "checked" symbol when clicking on a list item
-    var list = document.querySelector('ul');
-    list.addEventListener('click', function(ev) {
+      // Add a "checked" symbol when clicking on a list item
+      let credits = 0;
+      var list = document.querySelector('ul');
+      var countDisplay = document.createElement('div');
+      countDisplay.classList.add("credit-counter");
+      document.body.appendChild(countDisplay);
+      list.addEventListener('click', function(ev) {  
         if (ev.target.tagName === 'LI') {
-            ev.target.classList.toggle('checked');
-        }
-    }, false);
-
+              ev.target.classList.toggle('checked');
+              if(ev.target.classList.contains('checked')) {
+              credits++;
+              }
+              else{
+                credits--;
+              }
+            //Displays the checked items to the user.
+            //TODO: Add Styling to the "countDisplay" variable
+            countDisplay.textContent = `You have ${credits} credit(s).`;
+          }
+      }, false);
     // Create a new list item when clicking on the "Add" button
     function newElement() {
         var li = document.createElement("li");
