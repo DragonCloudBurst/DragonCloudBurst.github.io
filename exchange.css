@@ -101,3 +101,19 @@ button {
     border-radius: 10px;
     padding: 8px;
 }
+
+.home-link {
+    text-align: center;
+    font-family: secondFont;
+    text-decoration: none;
+    text-decoration-color: none;
+}
+
+a {
+    text-decoration: none;
+    text-decoration-color: none;
+    color: #dddce6;
+    background-color: #87899c;
+    padding: 10px;
+    border-radius: 10px;
+}
