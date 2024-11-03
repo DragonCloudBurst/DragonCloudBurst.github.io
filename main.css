@@ -29,6 +29,11 @@ h2 {
     text-align: center;
 }
 
+#window {
+    position: relative;
+    text-align: center;
+}
+
 #window img {
     width: 25vw;
     display: flex;
@@ -167,4 +172,20 @@ input {
     border-radius: 10px;
     margin: 30px;
     padding: 20px;
+}
+
+.credits-link {
+    text-align: center;
+    font-family: secondFont;
+    text-decoration: none;
+    text-decoration-color: none;
+}
+
+a {
+    text-decoration: none;
+    text-decoration-color: none;
+    color: #dddce6;
+    background-color: #87899c;
+    padding: 10px;
+    border-radius: 10px;
 }
