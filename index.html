@@ -8,9 +8,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title>Taskstronaut</title>
         <meta charset="UTF-8" lang="en">
-        <link rel="icon" type="image/x-icon" src="images/favicon_tasktronaut.ico">
+        <link rel="icon" type="image/favicon" href="images/favicon_tasktronaut.ico">
         <link rel = "stylesheet" href = "main.css">
     </head>
 
@@ -98,6 +98,11 @@
 
         addCloseFunctionality();
     }
+       document.getElementById("myInput").addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+              newElement();
+          }
+        });
     </script>
     </body>
     <script src="code.js"></script>
